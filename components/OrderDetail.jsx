@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/OrderDetail.module.css";
 const OrderDetail = ({ total, createOrder }) => {
-  const [costumer, setCostumer] = useState("");
+  const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
 
   const handleClick = () => {
@@ -18,7 +18,7 @@ const OrderDetail = ({ total, createOrder }) => {
             placeholder="John Doe"
             type="text"
             className={styles.input}
-            onChange={(e) => setCostumer(e.target.value)}
+            onChange={(e) => setCustomer(e.target.value)}
           />
         </div>
         <div className={styles.item}>
