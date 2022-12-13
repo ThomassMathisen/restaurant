@@ -12,7 +12,8 @@ const index = ({ products, orders }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "http://localhost:3000/api/products/" + id
+        "https://restaurant-f0qp4g3j4-thomassmathisen.vercel.app/api/products/" +
+          id
       );
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (err) {
@@ -25,9 +26,13 @@ const index = ({ products, orders }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
-        status: currentStatus + 1,
-      });
+      const res = await axios.put(
+        "https://restaurant-f0qp4g3j4-thomassmathisen.vercel.app/api/orders/" +
+          id,
+        {
+          status: currentStatus + 1,
+        }
+      );
       setOrderList([
         res.data,
         ...orderList.filter((order) => order._id !== id),
