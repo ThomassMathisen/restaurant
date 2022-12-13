@@ -131,8 +131,12 @@ export const getServerSideProps = async (ctx) => {
       },
     };
   }
-  const productRes = await axios.get("http://localhost:3000/api/products");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const productRes = await axios.get(
+    "https://restaurant-f0qp4g3j4-thomassmathisen.vercel.app/api/products"
+  );
+  const orderRes = await axios.get(
+    "https://restaurant-f0qp4g3j4-thomassmathisen.vercel.app/api/orders"
+  );
 
   return {
     props: {
